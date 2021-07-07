@@ -47,7 +47,7 @@ ENV \
 	MY_USER=ansible \
 	MY_GROUP=ansi \
 	MY_UID=1000 \
-	MY_GID=1000
+	MY_GID=1001
 
 # Add user and group
 RUN set -eux \

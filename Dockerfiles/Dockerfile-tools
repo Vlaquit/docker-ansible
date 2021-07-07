@@ -45,22 +45,22 @@ LABEL "org.opencontainers.image.description"="Ansible ${VERSION} tools"
 # Define uid/gid and user/group names
 ENV \
 	MY_USER=ansible \
-	MY_GROUP=ansible \
+	MY_GROUP=ansi \
 	MY_UID=1000 \
 	MY_GID=1000
 
 # Add user and group
 RUN set -eux \
 	&& addgroup -g ${MY_GID} ${MY_GROUP} \
-	&& adduser -h /home/ansible -s /bin/bash -G ${MY_GROUP} -D -u ${MY_UID} ${MY_USER} \
+	&& adduser -h /home/ansi -s /bin/bash -G ${MY_GROUP} -D -u ${MY_UID} ${MY_USER} \
 	\
-	&& mkdir /home/ansible/.gnupg \
-	&& chown ansible:ansible /home/ansible/.gnupg \
-	&& chmod 0700 /home/ansible/.gnupg \
+	&& mkdir /home/ansi/.gnupg \
+	&& chown ansi:ansible /home/ansi/.gnupg \
+	&& chmod 0700 /home/ansi/.gnupg \
 	\
-	&& mkdir /home/ansible/.ssh \
-	&& chown ansible:ansible /home/ansible/.ssh \
-	&& chmod 0700 /home/ansible/.ssh
+	&& mkdir /home/ansi/.ssh \
+	&& chown ansi:ansible /home/ansi/.ssh \
+	&& chmod 0700 /home/ansi/.ssh
 
 # Additional binaries
 RUN set -eux \
